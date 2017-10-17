@@ -16,9 +16,6 @@ namespace HopperTech.Models
         public string HomeAddress { get; set; }
         public string Email { get; set; }
 
-        [ForeignKey("Course")]
-        public int CourseID { get; set; }
-        public virtual Course Course { get; set; }
-
+        public virtual ICollection<Student_Course> Students_Courses { get; set; }
     }
 }
